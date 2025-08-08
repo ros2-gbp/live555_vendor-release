@@ -1,0 +1,9 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: live555
+Description: multimedia RTSP streaming library
+Version: @PROJECT_VERSION@
+Cflags: -I${includedir}/live555/liveMedia -I${includedir}/live555/groupsock -I${includedir}/live555/BasicUsageEnvironment -I${includedir}/live555/UsageEnvironment
+Libs: -L${libdir} -lliveMedia -lgroupsock -lBasicUsageEnvironment -lUsageEnvironment

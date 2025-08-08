@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>live555_vendor</name>
+  <version>0.20250719.0</version>
+  <description>multimedia RTSP streaming library</description>
+  <license>LGPL-3.0-or-later</license>
+  <license>BSD-1-Clause</license>
+  <maintainer email="timo.roehling@fkie.fraunhofer.de">Timo Röhling</maintainer>
+  <url type="website">http://www.live555.com/liveMedia/</url>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <build_depend>libssl-dev</build_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>
