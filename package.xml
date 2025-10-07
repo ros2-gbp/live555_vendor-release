@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>live555_vendor</name>
-  <version>0.20250719.0</version>
+  <version>0.20250917.0</version>
   <description>multimedia RTSP streaming library</description>
   <license>LGPL-3.0-or-later</license>
   <license>BSD-1-Clause</license>
