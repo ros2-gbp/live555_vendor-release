@@ -1,0 +1,12 @@
+Source: ros-jazzy-live555-vendor
+Section: misc
+Priority: optional
+Maintainer: Timo Röhling <timo.roehling@fkie.fraunhofer.de>
+Build-Depends: debhelper (>= 9.0.0), cmake, libssl-dev, ros-jazzy-ros-workspace
+Homepage: http://www.live555.com/liveMedia/
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-live555-vendor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-ros-workspace
+Description: multimedia RTSP streaming library
