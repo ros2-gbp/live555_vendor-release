@@ -24,11 +24,11 @@
 cmake_minimum_required(VERSION 3.21...3.31)
 project(
     live555_vendor
-    VERSION 0.20250719.0
+    VERSION 0.20250917.0
     LANGUAGES C CXX
     DESCRIPTION "multimedia RTSP streaming library"
 )
-set(LIVE555_UPSTREAM_VERSION 2025.7.19)
+set(LIVE555_UPSTREAM_VERSION 2025.9.17)
 
 include(CMakePackageConfigHelpers)
 include(GNUInstallDirs)
@@ -330,7 +330,7 @@ target_compile_definitions(
     liveMedia
     PRIVATE SOCKLEN_T=socklen_t _LARGEFILE_SOURCE=1 _FILE_OFFSET_BITS=64
             $<$<NOT:$<TARGET_EXISTS:OpenSSL::SSL>>:NO_OPENSSL=1>
-            $<$<BOOL:LIVE555_ALLOW_SERVER_PORT_REUSE>:ALLOW_SERVER_PORT_REUSE=1>
+            $<$<BOOL:${LIVE555_ALLOW_SERVER_PORT_REUSE}>:ALLOW_SERVER_PORT_REUSE=1>
 )
 target_include_directories(
     liveMedia
