@@ -24,11 +24,11 @@
 cmake_minimum_required(VERSION 3.21...3.31)
 project(
     live555_vendor
-    VERSION 0.20250917.0
+    VERSION 0.20251106.0
     LANGUAGES C CXX
     DESCRIPTION "multimedia RTSP streaming library"
 )
-set(LIVE555_UPSTREAM_VERSION 2025.9.17)
+set(LIVE555_UPSTREAM_VERSION 2025.11.6)
 
 include(CMakePackageConfigHelpers)
 include(GNUInstallDirs)
@@ -62,11 +62,21 @@ endif()
 # Detect ABI versions
 file(READ live555/config.linux-with-shared-libraries LIVE555_CONFIG_DATA)
 foreach(lib IN ITEMS UsageEnvironment BasicUsageEnvironment groupsock liveMedia)
-    if(LIVE555_CONFIG_DATA MATCHES "lib${lib}_VERSION_CURRENT=([0-9]+).*lib${lib}_VERSION_AGE=([0-9]+)")
-        math(EXPR ${lib}_SOVERSION "${CMAKE_MATCH_1} - ${CMAKE_MATCH_2}")
+    if(LIVE555_CONFIG_DATA MATCHES "lib${lib}_VERSION_CURRENT=([0-9]+)")
+        set(${lib}_VERSION_CURRENT "${CMAKE_MATCH_1}")
     else()
-        set(${lib}_SOVERSION 0)
+        message(WARNING "Unable to determine value of lib${lib}_VERSION_CURRENT")
+        set(${lib}_SOVERSION "0")
+        contine()
     endif()
+    if(LIVE555_CONFIG_DATA MATCHES "lib${lib}_VERSION_AGE=([0-9]+)")
+        set(${lib}_VERSION_AGE "${CMAKE_MATCH_1}")
+    else()
+        message(WARNING "Unable to determine value of lib${lib}_VERSION_AGE")
+        set(${lib}_SOVERSION "0")
+        contine()
+    endif()
+    math(EXPR ${lib}_SOVERSION "${${lib}_VERSION_CURRENT} - ${${lib}_VERSION_AGE}")
 endforeach()
 
 # Targets
