@@ -52,5 +52,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/fkie/live555_vendor.git
-    version: 0.20251106.0
-    version_saved: :{auto}
+    version: :{auto}
