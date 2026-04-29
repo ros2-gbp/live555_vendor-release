@@ -1,0 +1,48 @@
+ros-lyrical-live555-vendor (0.20251106.0-3resolute) resolute; urgency=high
+
+  * Update to live555 version 2025.11.06
+  * Make SONAME detection a little bit more robust
+  * Contributors: Timo Röhling
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Tue, 16 Dec 2025 00:00:00 -0000
+
+ros-lyrical-live555-vendor (0.20250917.0-3resolute) resolute; urgency=high
+
+  * Update to live555 version 2025.09.17
+  * Fix generator expression for LIVE555_ALLOW_SERVER_PORT_REUSE
+  * Contributors: Timo Röhling
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Tue, 07 Oct 2025 00:00:00 -0000
+
+ros-lyrical-live555-vendor (0.20250719.0-3resolute) resolute; urgency=high
+
+  * Update to live555 version 2025.07.19
+  * Contributors: Timo Röhling
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Wed, 30 Jul 2025 00:00:00 -0000
+
+ros-lyrical-live555-vendor (0.20250710.0-3resolute) resolute; urgency=high
+
+  * Update to live555 version 2025.07.10
+  * Contributors: Timo Röhling
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Tue, 15 Jul 2025 00:00:00 -0000
+
+ros-lyrical-live555-vendor (0.20250508.0-3resolute) resolute; urgency=high
+
+  * live555 2025.05.08
+  * Relicense CMake files under OSI approved BSD-1-Clause license
+    cf. ros/rosdistro#45674
+  * Contributors: Timo Röhling
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Fri, 16 May 2025 00:00:00 -0000
+
+ros-lyrical-live555-vendor (0.20250424.0-3resolute) resolute; urgency=high
+
+  * Initial release
+  * live555 2025.04.24
+  * Contributors: Timo Röhling
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Fri, 09 May 2025 00:00:00 -0000
+
+
